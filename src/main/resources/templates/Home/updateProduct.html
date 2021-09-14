@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Webshop - Update</title>
+    <link rel="stylesheet" href="/Stylesheet.css"/>
+</head>
+<body>
+<h1>Webshop</h1>
+<div class="container2">
+    <form action="/updateProduct" method = "post">
+        <table>
+            <thead>
+            <th></th>
+            <th></th>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Produkt ID:</td>
+                <td><input type="number" name="id" th:value="${product.id}" readonly></td>
+            </tr>
+            <tr>
+                <td><b>Produkt navn:</b></td>
+                <td><input type="text" name="productName" th:value="${product.name}" required></td>
+            </tr>
+            <tr>
+                <td><b>Pris :</b></td>
+                <td><input type="number" name="price" th:value="${product.price}" required></td>
+            </tr>
+
+            <input type="submit" value="Gem Ændringer" class="blueButton">
+            </tbody>
+        </table>
+    </form>
+</div>
+</body>
+</html>

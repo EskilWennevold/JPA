@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Webshop</title>
+    <link rel="stylesheet" href="/Stylesheet.css"/>
+</head>
+<body>
+<h1>Webshop</h1>
+<div class="container2">
+
+    <table>
+        <thead>
+        <th></th>
+        <th></th>
+        </thead>
+        <tr>
+            <td><b>Produkt ID:</b></td>
+            <td><span th:text="${product.id}" /></td>
+        </tr>
+        <tr>
+            <td><b>Produkt Navn:</b></td>
+            <td><span th:text="${product.name}" /></td>
+        </tr>
+        <tr>
+            <td><b>Product pris:</b></td>
+            <td><span th:text="${product.price}" /></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

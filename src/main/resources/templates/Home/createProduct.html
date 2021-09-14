@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Webshop</title>
+    <link rel="stylesheet" href="/Stylesheet.css"/>
+    <style>
+        .greenButton{
+            outline: none;
+            display: block;
+            border: 0;
+            font-size: 16px;
+            line-height: 1;
+            padding: 16px 30px;
+            border-radius: 30px;
+            background-color: green;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<h1>Webshop</h1>
+<div class="container2">
+
+    <form action="/createProduct" method="post">
+        <table>
+            <thead>
+            <th>Opret Produkt</th>
+            <th></th>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Produkt Navn:</td>
+                <td><input type="text" name="name" placeholder="Produkt navn" required/></td>
+            </tr>
+            <tr>
+                <td>Pris:</td>
+                <td><input type="text" name="price" placeholder="Pris" required></td>
+            </tr>
+            </tbody>
+        </table>
+        <button type="submit" class="greenButton">Tilføj Produkt</button>
+    </form>
+</div>
+</body>
+</html>

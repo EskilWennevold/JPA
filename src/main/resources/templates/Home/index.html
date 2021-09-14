@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Webshop</title>
+    <link rel="stylesheet" href="/Stylesheet.css"/>
+    <style>
+        .greenButton{
+            outline: none;
+            display: block;
+            border: 0;
+            font-size: 16px;
+            line-height: 1;
+            padding: 16px 30px;
+            border-radius: 30px;
+            background-color: green;
+            color: white;
+        }
+        .redButton{
+            outline: none;
+            display: block;
+            border: 0;
+            font-size: 16px;
+            line-height: 1;
+            padding: 16px 30px;
+            border-radius: 30px;
+            background-color: red;
+            color: white;
+
+        }
+        .blueButton{
+            outline: none;
+            display: block;
+            border: 0;
+            font-size: 16px;
+            line-height: 1;
+            padding: 16px 30px;
+            border-radius: 30px;
+            background-color: blue;
+            color: white;
+
+        }
+    </style>
+</head>
+<body>
+<h1>Webshop</h1>
+<div class="container">
+    <a href="/createProduct">
+        <button class="greenButton">
+            Tilføj Produkt
+        </button>
+    </a>
+    <table>
+        <thead>
+        <tr>
+            <th>Produkt ID</th>
+            <th>Produkt Navn</th>
+            <th>Pris</th>
+            <th></th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="product: ${products}" title="Click to View">
+            <td th:text="${product.id}"/>
+            <td th:text="${product.name}"/>
+            <td th:text="${product.price}"/>
+
+            <td>
+                <a th:href="@{'/viewProduct/'+${product.id}}">
+                    <button class="blueButton">
+                        Se Info
+                    </button>
+                </a>
+            </td>
+            <td>
+                <a th:href="@{'/updateProduct/'+${product.id}}">
+                    <button class="blueButton">
+                        Opdater
+                    </button>
+                </a>
+            </td>
+            <td>
+                <a th:href="@{'/deleteProduct/'+${product.id}}">
+                    <button class="redButton">
+                        Slet
+                    </button>
+                </a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
